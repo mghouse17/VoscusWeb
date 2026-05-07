@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { IBM_Plex_Mono, Roboto } from 'next/font/google';
-import '../../styles/globals.css';
+import { Exo_2, IBM_Plex_Mono, Roboto } from 'next/font/google';
+import './globals.css';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -13,6 +13,13 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-mono',
+  display: 'swap',
+});
+
+const exo2 = Exo_2({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-logo',
   display: 'swap',
 });
 
@@ -38,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${ibmPlexMono.variable} bg-ink-50 font-sans text-ink-900`}
+        className={`${roboto.variable} ${ibmPlexMono.variable} ${exo2.variable} bg-ink-50 font-sans text-ink-900`}
       >
         {children}
       </body>

@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ logoUrl }) => {
           ) : (
             <div className="h-8 w-8 bg-gradient-to-br from-navy-600 to-navy-800 rounded-lg" />
           )}
-          <span className="font-sans text-xl font-semibold text-ink-900 group-hover:text-teal-700 transition-colors">
+          <span className="font-logo text-xl font-semibold text-ink-900 group-hover:text-teal-700 transition-colors">
             {siteConfig.name}
           </span>
         </Link>

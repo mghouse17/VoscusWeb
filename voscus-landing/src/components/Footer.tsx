@@ -25,7 +25,7 @@ export const Footer: React.FC<FooterProps> = ({ logoUrl }) => {
               ) : (
                 <div className="h-8 w-8 bg-white rounded-lg" />
               )}
-              <span className="font-sans text-lg font-semibold text-teal-900">
+              <span className="font-logo text-lg font-semibold text-teal-900">
                 {siteConfig.name}
               </span>
             </Link>
