@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     'Watch every action. Understand every risk. Voscus monitors autonomous AI agents, calculates blast radius, and helps teams stop risky actions before they become incidents.',
   keywords: ['AI agents', 'AI safety', 'agent monitoring', 'action oversight'],
   openGraph: {
-    title: 'Voscus - AI Agent Watchdog',
+    title: 'Voscus - AI Agent Oversight',
     description:
       'Action-level oversight for autonomous AI agents. Monitor tool use across email, files, code, browsers, and enterprise systems.',
     type: 'website',
-    url: 'https://voscus.ai',
+    url: 'https://voscus.com',
   },
 };
 
