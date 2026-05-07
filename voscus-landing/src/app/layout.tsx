@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Exo_2, IBM_Plex_Mono, Roboto } from 'next/font/google';
 import './globals.css';
 
+
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['400', '500', '700', '900'],
@@ -24,7 +25,7 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-  title: 'Voscus - AI Agent Watchdog',
+  title: 'Voscus - AI Agent Oversight',
   description:
     'Watch every action. Understand every risk. Voscus monitors autonomous AI agents, calculates blast radius, and helps teams stop risky actions before they become incidents.',
   keywords: ['AI agents', 'AI safety', 'agent monitoring', 'action oversight'],
