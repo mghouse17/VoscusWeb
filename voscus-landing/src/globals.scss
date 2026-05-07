@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  color: #0a1229;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Smooth transitions for interactive elements */
+@media (prefers-reduced-motion: no-preference) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    transition: background-color 150ms var(--ease-out),
+      color 150ms var(--ease-out), border-color 150ms var(--ease-out),
+      box-shadow 150ms var(--ease-out), transform 100ms var(--ease-out);
+  }
+}
+
+/* Hover state media query for touch devices */
+@media (hover: hover) and (pointer: fine) {
+  button:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+
+  a:hover {
+    transform: translateY(-1px);
+  }
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #1a2d4d;
+  outline-offset: 2px;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #1a2d4d 0%, #162844 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Stagger animation helper */
+@for $i from 1 through 12 {
+  .animate-delay-#{$i * 50} {
+    animation-delay: #{$i * 50}ms;
+  }
+}
+
+/* Hardware acceleration for smooth animations */
+.will-animate {
+  will-change: transform, opacity;
+}
+
+/* Subtle card elevation */
+.card-subtle {
+  transition: box-shadow 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-subtle:hover {
+    box-shadow: 0 10px 30px rgba(26, 45, 77, 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+/* Dashboard metric pulse */
+.metric-pulse {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Loading shimmer effect */
+.shimmer-loading {
+  background: linear-gradient(
+    90deg,
+    #f0f4f8 25%,
+    #e1e8f0 50%,
+    #f0f4f8 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}

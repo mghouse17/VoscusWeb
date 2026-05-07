@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.heading-display {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.heading-sub {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.mono {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.animate-in {
+  animation: fadeInUp 0.7s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.border-glow {
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(240,249,255,0.4) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.demo-block {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.demo-block.active {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+}
+
+.timeline-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  animation: slideIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.status-executed { color: #6b7280; }
+.status-executing { color: #f59e0b; font-weight: 600; }
+.status-warning { color: #ef4444; font-weight: 600; animation: pulse 1s ease-in-out infinite; }
+.status-blocked { color: #ef4444; font-weight: 700; animation: pulse 0.6s ease-in-out infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-critical {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.badge-primary {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1e40af;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}

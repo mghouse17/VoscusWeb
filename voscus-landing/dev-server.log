@@ -1,0 +1,144 @@
+
+> voscus-landing@1.0.0 dev
+> next dev -p 3000
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1016ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.9s (1207 modules)
+ GET / 200 in 3104ms
+ ✓ Compiled in 217ms (607 modules)
+ GET / 200 in 61ms
+ GET / 200 in 61ms
+ ✓ Compiled in 394ms (1207 modules)
+ GET / 200 in 116ms
+ GET / 200 in 75ms
+ GET / 200 in 68ms
+ ✓ Compiled in 320ms (1207 modules)
+ GET / 200 in 109ms
+ ✓ Compiled /_not-found in 290ms (1210 modules)
+ GET /_next/static/css/app/layout.css?v=1778134798002 404 in 358ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 368ms
+ GET /_next/static/chunks/webpack.js?v=1778134798002 404 in 371ms
+ GET /_next/static/chunks/main-app.js?v=1778134798002 404 in 371ms
+ GET /_next/static/chunks/app/page.js 404 in 361ms
+ GET /_next/static/css/app/layout.css?v=1778134798491 404 in 53ms
+ GET / 200 in 54ms
+ GET /_next/static/css/app/layout.css?v=1778134802282 404 in 36ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 37ms
+ GET /_next/static/chunks/app/page.js 404 in 36ms
+ GET /_next/static/chunks/main-app.js?v=1778134802282 404 in 39ms
+ GET / 200 in 78ms
+ GET /_next/static/css/app/layout.css?v=1778134803146 404 in 22ms
+ GET /_next/static/chunks/main-app.js?v=1778134803146 404 in 25ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 25ms
+ GET /_next/static/chunks/app/page.js 404 in 23ms
+ GET / 200 in 77ms
+ GET /_next/static/css/app/layout.css?v=1778134803721 404 in 37ms
+ GET /_next/static/chunks/main-app.js?v=1778134803721 404 in 38ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 37ms
+ GET /_next/static/chunks/app/page.js 404 in 37ms
+ GET / 200 in 78ms
+ GET /_next/static/css/app/layout.css?v=1778134803970 404 in 25ms
+ GET /_next/static/chunks/main-app.js?v=1778134803970 404 in 27ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 25ms
+ GET /_next/static/chunks/app/page.js 404 in 26ms
+ GET / 200 in 41ms
+ GET /_next/static/css/app/layout.css?v=1778134804177 404 in 15ms
+ GET /_next/static/chunks/main-app.js?v=1778134804177 404 in 16ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 16ms
+ GET /_next/static/chunks/app/page.js 404 in 15ms
+ GET / 200 in 70ms
+ GET /_next/static/css/app/layout.css?v=1778134804353 404 in 13ms
+ GET /_next/static/chunks/app/page.js 404 in 13ms
+ GET /_next/static/chunks/main-app.js?v=1778134804353 404 in 15ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 13ms
+ GET / 200 in 81ms
+ GET /_next/static/css/app/layout.css?v=1778134804529 404 in 24ms
+ GET /_next/static/chunks/main-app.js?v=1778134804529 404 in 29ms
+ GET /_next/static/chunks/app/page.js 404 in 27ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 29ms
+ GET / 200 in 54ms
+ GET /_next/static/css/app/layout.css?v=1778134804712 404 in 22ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 21ms
+ GET /_next/static/chunks/main-app.js?v=1778134804712 404 in 22ms
+ GET /_next/static/chunks/app/page.js 404 in 21ms
+ GET / 200 in 37ms
+ GET /_next/static/css/app/layout.css?v=1778134804880 404 in 18ms
+ GET /_next/static/chunks/main-app.js?v=1778134804880 404 in 32ms
+ GET /_next/static/chunks/app/page.js 404 in 29ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 32ms
+ GET / 200 in 60ms
+ GET /_next/static/css/app/layout.css?v=1778134805065 404 in 55ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 50ms
+ GET /_next/static/chunks/main-app.js?v=1778134805065 404 in 50ms
+ GET /_next/static/chunks/app/page.js 404 in 49ms
+ GET / 200 in 58ms
+ GET /_next/static/css/app/layout.css?v=1778134805257 404 in 13ms
+ GET /_next/static/chunks/main-app.js?v=1778134805257 404 in 45ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 43ms
+ GET /_next/static/chunks/app/page.js 404 in 44ms
+ GET / 200 in 64ms
+ GET /_next/static/css/app/layout.css?v=1778134805433 404 in 17ms
+ GET /_next/static/chunks/main-app.js?v=1778134805433 404 in 19ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 18ms
+ GET /_next/static/chunks/app/page.js 404 in 17ms
+ GET / 200 in 82ms
+ GET /_next/static/css/app/layout.css?v=1778134805617 404 in 12ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 48ms
+ GET /_next/static/chunks/main-app.js?v=1778134805617 404 in 50ms
+ GET /_next/static/chunks/app/page.js 404 in 49ms
+ GET / 200 in 60ms
+ GET /_next/static/css/app/layout.css?v=1778134805825 404 in 15ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 17ms
+ GET /_next/static/chunks/main-app.js?v=1778134805825 404 in 18ms
+ GET /_next/static/chunks/app/page.js 404 in 16ms
+ GET / 200 in 67ms
+ GET /_next/static/css/app/layout.css?v=1778134806585 404 in 21ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 24ms
+ GET /_next/static/chunks/main-app.js?v=1778134806585 404 in 24ms
+ GET /_next/static/chunks/app/page.js 404 in 22ms
+ GET / 200 in 57ms
+ GET /_next/static/css/app/layout.css?v=1778134806815 404 in 16ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 62ms
+ GET /_next/static/chunks/app/page.js 404 in 63ms
+ GET /_next/static/chunks/main-app.js?v=1778134806815 404 in 65ms
+ GET / 200 in 58ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1527ms (1423 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1610ms
+ GET /_next/static/webpack/e97eea9a0bdb110e.webpack.hot-update.json 404 in 496ms
+ GET / 200 in 97ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 16ms
+ GET / 200 in 64ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 26ms
+ GET / 200 in 54ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 17ms
+ GET / 200 in 52ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 17ms
+ ✓ Compiled in 733ms (1432 modules)
+ GET / 200 in 203ms
+ ✓ Compiled /_not-found in 324ms (1421 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 424ms
+ GET / 200 in 95ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 22ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 59ms
+ GET / 200 in 78ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 23ms
+ ✓ Compiled in 401ms (1435 modules)
+ GET / 200 in 117ms
+ ✓ Compiled /_error in 296ms (1423 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 348ms
+ ✓ Compiled in 322ms (1432 modules)
+ ✓ Compiled /_not-found in 193ms (1421 modules)
+ GET /_next/static/webpack/134407b50e3bb5bb.webpack.hot-update.json 404 in 282ms
+ GET / 200 in 77ms
+ ✓ Compiled /_error in 174ms (1423 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 211ms
+ GET / 200 in 103ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 22ms
+ GET / 200 in 52ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 61ms
