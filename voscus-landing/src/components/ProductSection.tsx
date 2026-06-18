@@ -1,22 +1,22 @@
 import React from 'react';
 import {
-  AlertTriangle,
-  CheckCircle,
+  Code,
+  Cpu,
   Eye,
-  FileText,
-  Settings,
+  GitBranch,
   Target,
+  Users,
 } from 'lucide-react';
 import { landingContent } from '../content/landing';
 import { Reveal } from './Motion';
 
 const featureIcons = {
   eye: Eye,
-  alert: AlertTriangle,
   target: Target,
-  file: FileText,
-  settings: Settings,
-  check: CheckCircle,
+  cpu: Cpu,
+  split: GitBranch,
+  code: Code,
+  users: Users,
 } as const;
 
 export const ProductSection: React.FC = () => {
@@ -79,10 +79,10 @@ export const ProductSection: React.FC = () => {
         <Reveal preset="container" className="mt-20">
           <Reveal preset="item" className="mb-12">
             <h3 className="mb-4 text-3xl font-bold text-ink-900">
-              Real-Time Agent Oversight Dashboard
+              Pre-Execution Decision Dashboard
             </h3>
             <p className="max-w-2xl text-lg text-ink-700">
-              See everything that matters in one place
+              Every action assessed, every decision explained, before anything runs
             </p>
           </Reveal>
 

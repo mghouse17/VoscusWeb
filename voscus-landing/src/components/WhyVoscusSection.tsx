@@ -97,7 +97,7 @@ export const WhyVoscusSection: React.FC = () => {
 
         <Reveal preset="container" className="mt-16">
           <Reveal preset="itemTight" className="rounded-[2rem] bg-deep-panel p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">The Core Difference</h3>
+            <h3 className="text-2xl font-bold mb-4">Reactive vs. Pre-Execution: Why It Matters</h3>
             <p className="mb-4 text-lg leading-relaxed text-teal-50">
               {whyVoscus.insight}
             </p>

@@ -51,7 +51,7 @@ export const CTASection: React.FC = () => {
 
           <Reveal preset="item" className="mt-16 border-t border-white/12 pt-12">
             <p className="mb-6 text-sm text-teal-100">
-              Built for engineering and security teams at growth-stage companies
+              Decision intelligence for engineering and security teams running AI agents at scale
             </p>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               {cta.trust.map((stat) => (
