@@ -1,271 +1,294 @@
 export const landingContent = {
   hero: {
-    eyebrow: 'Action security for autonomous agents',
-    title: 'Watch every action before it becomes an incident.',
+    eyebrow: 'Decision intelligence for autonomous agents',
+    title: 'Every agent action, evaluated before it runs.',
     description:
-      'Voscus monitors agent behavior across email, code, databases, and workflows. It calculates blast radius in real time so teams can stop risky actions before they spread.',
-    streamItems: [
-      ['14:32:05', 'Email agent requested 48,216 external recipients', 'review'],
-      ['14:32:06', 'Blast radius mapped to CRM and billing contacts', 'mapped'],
-      ['14:32:07', 'Send action blocked pending security approval', 'blocked'],
+      'Voscus evaluates every action your agents propose — assessing blast radius, matching policies, and routing decisions to the right outcome — before anything executes.',
+    dispositions: [
+      { label: 'Allowed', value: '231' },
+      { label: 'Warned', value: '3' },
+      { label: 'Held', value: '2' },
+      { label: 'Stopped', value: '1' },
     ],
+    streamItems: [
+      ['14:32:05', 'Email agent targeting 48,216 external recipients', 'assessing'],
+      ['14:32:06', 'Blast radius mapped — CRM, billing, and compliance scope', 'mapped'],
+      ['14:32:07', 'Held — awaiting human approval.', 'held'],
+    ],
+    reasoning: {
+      blastRadius: {
+        value: '48,216 external contacts',
+        detail: 'Scope: CRM · billing · compliance segments',
+      },
+      policyMatch: {
+        value: 'REQUIRE_APPROVAL',
+        detail: 'Exceeds external send threshold (5,000)',
+      },
+      explanation:
+        'This action targets 48,216 external contacts — 9.6× the approved threshold — and touches compliance-regulated segments. Routing to security team for approval before execution.',
+    },
   },
+
   problem: {
-    eyebrow: 'The Challenge',
-    title: 'Autonomous Agents Can Act Faster Than You Can Watch',
+    eyebrow: 'The Gap',
+    title: 'Agents Act. Nobody Knows the Downstream Consequence.',
     description:
-      'Traditional guardrails scan prompts and responses. But agents do not just produce text - they execute actions. By the time you spot a problem, the damage is already happening.',
+      'Content filters and output guardrails answer the wrong question. They ask "is this safe to say?" — not "what happens if this runs?" By the time a risky action completes, the scope of its impact is already set.',
     risks: [
       {
         icon: 'mail',
         title: 'Email Agents',
-        description: 'Send emails to wrong recipients, leak sensitive information, spam users',
+        description:
+          'Send to wrong recipients, expose sensitive data, or trigger compliance obligations across thousands of contacts.',
       },
       {
         icon: 'code',
         title: 'Code Agents',
-        description: 'Commit breaking changes, introduce vulnerabilities, delete repositories',
+        description:
+          'Push breaking changes, introduce vulnerabilities, or alter production infrastructure without human review.',
       },
       {
         icon: 'database',
         title: 'Data Agents',
-        description: 'Access unauthorized databases, export sensitive records, corrupt data',
+        description:
+          'Access unauthorized records, export regulated data, or alter datasets in ways that propagate downstream.',
       },
       {
         icon: 'globe',
         title: 'API Agents',
-        description: 'Make incorrect requests, drain budgets, trigger cascading failures',
+        description:
+          'Fire incorrect requests, consume budget against intent, or trigger state changes across dependent systems.',
       },
     ],
     insight:
-      'As AI agents become more capable, they are deployed in workflows touching email, code, databases, and enterprise systems. A single bad agent decision can cascade across your entire infrastructure in milliseconds. You need visibility into what agents actually do - not just what they say they will do.',
+      'Competitors intercept after intent is expressed — filtering outputs, blocking content, flagging responses. Voscus intercepts before execution. It maps the blast radius of an action, evaluates downstream consequence, and gives agents — and the teams running them — a real decision.',
   },
   product: {
-    eyebrow: 'What Voscus Does',
-    title: 'Action-level oversight for autonomous AI',
+    eyebrow: 'How Voscus Works',
+    title: 'Six capabilities. One decision before every action.',
     description:
-      'We do not scan prompts. We watch what agents actually do. Real-time monitoring, risk scoring, and enforcement - all built for autonomous agents operating across your enterprise systems.',
+      'Before any agent action executes, Voscus assesses blast radius, matches policy, and routes the result to one of four outcomes — deterministically, with full reasoning. No LLM in the decision path.',
     features: [
       {
         icon: 'eye',
-        title: 'Monitor Agent Actions',
+        title: 'Pre-Execution Assessment',
         description:
-          'Real-time visibility into what your agents are doing - every API call, file access, and system interaction.',
-      },
-      {
-        icon: 'alert',
-        title: 'Detect Risky Behavior',
-        description:
-          'Identify patterns that signal problems: unauthorized access attempts, unusual data volumes, policy violations.',
+          'Every action an agent proposes is evaluated before it runs. Voscus intercepts at the point of intent — not after execution — and maps what the action will actually do.',
       },
       {
         icon: 'target',
-        title: 'Calculate Blast Radius',
+        title: 'Blast Radius Analysis',
         description:
-          'Understand the scope of impact before it spreads. What systems are affected? Who has access? How much data?',
+          'The core differentiator. Before execution, Voscus maps the full downstream reach of an action — contacts, systems, data, and compliance scope — deterministically, not by inference. No other product in this space does this.',
       },
       {
-        icon: 'file',
-        title: 'Explainable Audit Trails',
+        icon: 'cpu',
+        title: 'Deterministic Decision Engine',
         description:
-          'Full provenance of every action. Why did the agent do this? What was the context? What went wrong?',
+          'No LLM in the decision path. Given the same action and the same policies, Voscus produces the same outcome every time. Every decision is written to an append-only log with full reasoning — what the action was, what policy applied, and what outcome was selected.',
       },
       {
-        icon: 'settings',
-        title: 'Flexible Integration',
+        icon: 'split',
+        title: 'The Four Outcomes',
         description:
-          'Start as an observability layer. Evolve into enforcement with blocking integrations as you gain confidence.',
+          'Every action resolves to one of four outcomes: Allow (proceed), Warn (proceed with notice), Hold (route for human approval), or Stop (reject). Most actions are allowed. Intervention is the exception, not the default.',
       },
       {
-        icon: 'check',
-        title: 'Built for High-Risk Workflows',
+        icon: 'code',
+        title: 'Policy-as-Code',
         description:
-          'Designed for finance ops, healthcare admin, code automation, and enterprise workflow agents.',
+          'Enforcement rules written in YAML, stored in version control, and reviewed like any other code change. Engineers and security teams understand this model immediately. Policies are inspectable, diffable, and auditable by design.',
+      },
+      {
+        icon: 'users',
+        title: 'Human-in-the-Loop Approval',
+        description:
+          'REQUIRE_APPROVAL is a first-class outcome, not a fallback. Consequential actions are routed to the right person — with blast radius, policy context, and a plain-language explanation — before anything executes.',
       },
     ],
     metrics: [
-      { label: 'Agent Activity', value: '247', sublabel: 'Actions in last 24h', pulse: true },
-      { label: 'Risk Score', value: '12', sublabel: 'Flagged actions', pulse: false },
-      { label: 'Blast Radius', value: '3', sublabel: 'Systems impacted', pulse: false },
-      { label: 'Blocked Actions', value: '8', sublabel: 'Prevented incidents', pulse: false },
+      { label: 'Actions Assessed', value: '237', sublabel: 'Pre-execution decisions in last 24h', pulse: true },
+      { label: 'Held for Approval', value: '2', sublabel: 'Routed to human review', pulse: false },
+      { label: 'Systems Mapped', value: '3', sublabel: 'In-scope blast radius', pulse: false },
+      { label: 'Policy Matched', value: '9', sublabel: 'Rules applied across all outcomes', pulse: false },
     ],
   },
   whyVoscus: {
-    eyebrow: 'Competitive Advantage',
-    title: 'Built for What Is Coming, Not What Is Passing',
+    eyebrow: 'The Core Difference',
+    title: 'Others Intercept After. Voscus Intercepts Before.',
     description:
-      'Traditional guardrails, policy layers, and LLM filters monitor text. Voscus monitors actions. There is a difference.',
+      'Competitors are reactive by design — they filter outputs, block content, and flag responses. Voscus answers a different question entirely: what happens if this action runs?',
     comparisons: [
       {
-        feature: 'Focuses on agent actions',
+        feature: 'Pre-execution assessment',
         voscus: true,
         competitors: false,
-        details: 'We monitor what agents actually do, not just what they say',
-      },
-      {
-        feature: 'Real-time action monitoring',
-        voscus: true,
-        competitors: false,
-        details: 'Visibility into email, files, code, APIs, and databases',
+        details: 'Evaluate agent actions before they run, not after',
       },
       {
         feature: 'Blast radius analysis',
         voscus: true,
         competitors: false,
-        details: 'Understand scope of impact across systems',
+        details: 'Deterministic mapping of downstream consequence across systems',
       },
       {
-        feature: 'Enterprise workflow ready',
+        feature: 'Impact-aware policy enforcement',
         voscus: true,
         competitors: false,
-        details: 'Built for finance ops, code agents, admin automation',
+        details: 'Policy evaluated against actual scope, not intent signals',
+      },
+      {
+        feature: 'Human approval workflows',
+        voscus: true,
+        competitors: false,
+        details: 'High-impact actions routed to approvers with full context',
       },
       {
         feature: 'Explainable audit trails',
         voscus: true,
         competitors: 'Limited',
-        details: 'Complete provenance and context for every action',
+        details: 'Every decision traced: intent, assessment, policy, outcome',
       },
       {
-        feature: 'Flexible enforcement',
+        feature: 'Policy-as-code rules',
         voscus: true,
         competitors: 'Limited',
-        details: 'Start observing, evolve to blocking',
+        details: 'Deterministic, version-controlled, inspectable enforcement',
       },
       {
-        feature: 'LLM prompt scanning',
+        feature: 'Output content filtering',
         voscus: 'Built-in',
         competitors: true,
-        details: 'Legacy guardrail functionality included',
+        details: 'Legacy guardrail functionality included where needed',
       },
     ],
     insight:
-      'Policy enforcement and prompt filters are necessary but not sufficient. They tell you what an agent said it would do, not what it actually did.',
+      'Output filtering and prompt guardrails tell you what an agent said it would do — not what it will actually do. That gap is where the real risk lives.',
     insightFollowup:
-      'Voscus closes that gap by monitoring action execution in real time. We answer the questions that matter: What did the agent touch? What changed? Who was affected? How do we stop this from happening again?',
+      'Voscus closes that gap by assessing impact before execution. The questions that matter are answered before anything runs: what does this action reach, who is affected, and does the scope justify proceeding without a human in the loop?',
   },
   comparison: {
     eyebrow: 'Feature Comparison',
     title: 'How Voscus Compares',
     description:
-      'Voscus is purpose-built for agent action monitoring. Other tools focus on text filtering. Here is what is different.',
+      'Voscus is purpose-built for pre-execution decision intelligence. Other tools focus on output filtering and content moderation. The distinction is fundamental.',
     featureNames: [
-      'Real-time action monitoring',
-      'Multi-tool visibility (email, code, files, APIs, databases)',
-      'Blast radius analysis',
-      'Enterprise workflow support',
+      'Pre-execution impact assessment',
+      'Multi-system blast radius analysis',
+      'Policy-as-code enforcement',
+      'Human approval workflows',
       'Explainable audit trails',
-      'Flexible enforcement (observe -> block)',
-      'Prompt filtering',
+      'Flexible enforcement (assess → approve → block)',
+      'Output content filtering',
     ],
     competitors: [
       {
         name: 'Voscus',
-        focus: 'Action-level AI agent monitoring',
+        focus: 'Pre-execution decision intelligence',
         badge: true,
         features: {
-          'Real-time action monitoring': true,
-          'Multi-tool visibility (email, code, files, APIs, databases)': true,
-          'Blast radius analysis': true,
-          'Enterprise workflow support': true,
+          'Pre-execution impact assessment': true,
+          'Multi-system blast radius analysis': true,
+          'Policy-as-code enforcement': true,
+          'Human approval workflows': true,
           'Explainable audit trails': true,
-          'Flexible enforcement (observe -> block)': true,
-          'Prompt filtering': true,
+          'Flexible enforcement (assess → approve → block)': true,
+          'Output content filtering': true,
         },
       },
       {
         name: 'LlamaGuard',
         focus: 'LLM response filtering',
         features: {
-          'Real-time action monitoring': false,
-          'Multi-tool visibility (email, code, files, APIs, databases)': false,
-          'Blast radius analysis': false,
-          'Enterprise workflow support': false,
+          'Pre-execution impact assessment': false,
+          'Multi-system blast radius analysis': false,
+          'Policy-as-code enforcement': false,
+          'Human approval workflows': false,
           'Explainable audit trails': false,
-          'Flexible enforcement (observe -> block)': false,
-          'Prompt filtering': true,
+          'Flexible enforcement (assess → approve → block)': false,
+          'Output content filtering': true,
         },
       },
       {
         name: 'NeMo Guardrails',
         focus: 'LLM output moderation',
         features: {
-          'Real-time action monitoring': false,
-          'Multi-tool visibility (email, code, files, APIs, databases)': false,
-          'Blast radius analysis': false,
-          'Enterprise workflow support': false,
+          'Pre-execution impact assessment': false,
+          'Multi-system blast radius analysis': false,
+          'Policy-as-code enforcement': false,
+          'Human approval workflows': false,
           'Explainable audit trails': false,
-          'Flexible enforcement (observe -> block)': false,
-          'Prompt filtering': true,
+          'Flexible enforcement (assess → approve → block)': false,
+          'Output content filtering': true,
         },
       },
       {
         name: 'Policy Layers',
-        focus: 'Static policy enforcement',
+        focus: 'Static rule enforcement',
         features: {
-          'Real-time action monitoring': false,
-          'Multi-tool visibility (email, code, files, APIs, databases)': false,
-          'Blast radius analysis': false,
-          'Enterprise workflow support': false,
+          'Pre-execution impact assessment': false,
+          'Multi-system blast radius analysis': false,
+          'Policy-as-code enforcement': false,
+          'Human approval workflows': false,
           'Explainable audit trails': false,
-          'Flexible enforcement (observe -> block)': false,
-          'Prompt filtering': true,
+          'Flexible enforcement (assess → approve → block)': false,
+          'Output content filtering': true,
         },
       },
     ],
   },
   useCases: {
     eyebrow: 'Real-World Applications',
-    title: 'Voscus Powers the Agents Your Business Trusts',
+    title: 'Decision Intelligence for the Workflows That Can\'t Be Wrong',
     description:
-      'From finance to healthcare to code generation, Voscus gives teams confidence to deploy AI agents in high-stakes workflows.',
+      'From finance to healthcare to code generation, Voscus gives teams confidence to deploy AI agents in high-stakes workflows — because every action has been understood before it runs.',
     items: [
       {
         icon: 'trending',
         title: 'Finance & Trading',
         description:
-          'AI agents executing trades, managing portfolios, or reconciling accounts. Monitor every transaction. Catch order routing errors before they cost millions.',
-        highlights: ['Transaction monitoring', 'Account access control', 'Risk limit enforcement'],
+          'AI agents executing trades, managing portfolios, or reconciling accounts. Assess impact before every transaction. Enforce risk limits through policy-as-code, not manual review.',
+        highlights: ['Pre-execution transaction assessment', 'Policy-as-code risk limits', 'Approval workflows for high-value actions'],
       },
       {
         icon: 'health',
         title: 'Healthcare Admin',
         description:
-          'Agents managing patient records, scheduling, and billing. Ensure HIPAA compliance. Detect unauthorized data access.',
-        highlights: ['Patient data protection', 'Audit trail compliance', 'Access control'],
+          'Agents managing patient records, scheduling, and billing. Understand the downstream consequence of every data access before it occurs. Maintain HIPAA compliance deterministically.',
+        highlights: ['Pre-access impact assessment', 'Deterministic compliance enforcement', 'Explainable audit trails'],
       },
       {
         icon: 'code2',
         title: 'Code Generation Agents',
         description:
-          'Automated coding, PR creation, and infrastructure changes. Stop agents from committing vulnerable code or breaking production.',
-        highlights: ['Code quality gates', 'Security scanning', 'Deployment control'],
+          'Automated coding, PR creation, and infrastructure changes. Assess blast radius across production systems before any commit or deployment runs.',
+        highlights: ['Pre-deployment impact assessment', 'Policy-as-code quality gates', 'Human approval for high-blast-radius changes'],
       },
       {
         icon: 'workflow',
         title: 'Enterprise Workflows',
         description:
-          'Agents automating procurement, HR, or operations. Monitor spending. Control who has access to what systems.',
-        highlights: ['Spending controls', 'Access governance', 'Approval workflows'],
+          'Agents automating procurement, HR, or operations. Know what an action will actually affect — not just what the agent intends — before it proceeds.',
+        highlights: ['Downstream consequence mapping', 'Spending and access policy-as-code', 'Approval routing with full context'],
       },
       {
         icon: 'message',
         title: 'Customer Support Agents',
         description:
-          'Automated support with tool access. Ensure agents only give correct information and never override customer preferences.',
-        highlights: ['Response accuracy', 'Customer preference enforcement', 'Escalation control'],
+          'Automated support with tool access. Assess impact before agents act on customer data, override preferences, or trigger account changes.',
+        highlights: ['Pre-action impact assessment', 'Customer preference enforcement', 'Escalation with decision context'],
       },
     ],
   },
   cta: {
-    title: 'Secure Your Agentic Workflows',
-    accent: 'Before They Scale',
+    title: 'Give Every Agent Action',
+    accent: 'A Decision Before It Runs.',
     description:
-      'As autonomous AI agents become more capable and more widely deployed, oversight becomes critical. Voscus gives you action-level visibility and control before incidents happen.',
+      'Voscus is the decision intelligence layer for autonomous AI — assessing blast radius, applying policy-as-code, and routing for human approval before actions execute. Understand before acting.',
     trust: [
       { label: 'Early Access', value: 'Available' },
       { label: 'Integration Support', value: '24/7' },
-      { label: 'Security', value: 'Enterprise-Grade' },
+      { label: 'Enforcement', value: 'Policy-as-Code' },
     ],
   },
 } as const;
