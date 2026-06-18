@@ -62,7 +62,7 @@ export const ProblemSection: React.FC = () => {
             <div className="flex gap-4">
               <AlertCircle className="mt-1 h-6 w-6 flex-shrink-0 text-signal-200" />
               <div>
-                <h3 className="mb-2 text-lg font-bold text-white">The Question Competitors Don't Answer</h3>
+                <h3 className="mb-2 text-lg font-bold text-white">The Question Competitors Don&apos;t Answer</h3>
                 <p className="text-teal-50">{problem.insight}</p>
               </div>
             </div>
