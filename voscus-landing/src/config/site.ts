@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Voscus',
-  logoPath: '/voscus-logo-2026.png',
+  logoPath: '/icon.png',
   contactEmail: 'hello@voscus.ai',
   demoSubject: 'Demo Request',
   navItems: [
